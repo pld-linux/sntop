@@ -1,12 +1,12 @@
 Summary:	A curses-based top-esque monitor of network host status
 Summary(pl):	Bazowany na ncurses monitor stanu hostów w sieci (podobny do topa)
 Name:		sntop
-Version:	1.4.2
-Release:	2
+Version:	1.4.3
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	2aff519d2fbbb835b0eaa1909fd8e8af
+# Source0-md5:	0e99c64ea5a1bad6c1a32ac0dc2e9dd9
 Patch0:		sntop-ncurses.patch
 URL:		http://sntop.sourceforge.net/
 Requires:	fping
