@@ -1,11 +1,11 @@
---- sntop-1.4.2/Makefile	Mon Apr  8 14:48:22 2002
-+++ sntop-1.4.2/Makefile.orig	Mon Apr  8 14:48:51 2002
+--- sntop-1.4.2/Makefile.in	Mon Apr  8 14:59:50 2002
++++ sntop-1.4.2/Makefile.in.orig	Mon Apr  8 14:59:58 2002
 @@ -29,7 +29,7 @@
  
- CC = i586-pld-linux-gcc
- CFLAGS = -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer  -DSTDC_HEADERS=1 -DHAVE_SYS_WAIT_H=1 -DRETSIGTYPE=void -DHAVE_LIBNCURSES=1 -DHAVE_GETOPT_LONG=1 
+ CC = @CC@
+ CFLAGS = -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer @DEFS@
 -INCLUDE = .
 +INCLUDE = /usr/include/ncurses
- INSTDIR = /usr/bin
+ INSTDIR = @bindir@
  ETCDIR = /etc
- LIBS = -lncurses 
+ LIBS = @LIBS@
