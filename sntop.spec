@@ -5,8 +5,6 @@ Version:	1.4.2
 Release:	1
 License:	GPL
 Group:		Applications
-Group(de):	Applikationen
-Group(pl):	Aplikacje
 # Source0:	http://sntop.sourceforge.net/files/%{name}-%{version}.tar.gz
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}.tar.gz
 URL:		http://sntop.sourceforge.net/
