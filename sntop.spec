@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	2aff519d2fbbb835b0eaa1909fd8e8af
 Patch0:		sntop-ncurses.patch
 URL:		http://sntop.sourceforge.net/
 Requires:	fping
