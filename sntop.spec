@@ -57,14 +57,13 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_sysconfdir},%{_mandir}/man1}
 %{__make} install INSTDIR=$RPM_BUILD_ROOT%{_bindir} ETCDIR=$RPM_BUILD_ROOT%{_sysconfdir} MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
 
-gzip -9nf ChangeLog CREDITS  TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ChangeLog CREDITS  TODO
 %{_sysconfdir}/sntoprc
 %attr(755,root,root) %{_bindir}/sntop
 %{_mandir}/man1/sntop.1.gz
