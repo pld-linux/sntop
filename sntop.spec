@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		sntop-ncurses.patch
 URL:		http://sntop.sourceforge.net/
 Requires:	fping
-BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 sntop is an ncurses-based top-esque console utility for monitoring the
