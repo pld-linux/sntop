@@ -8,8 +8,8 @@ Group:		Applications
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}.tar.gz
 Patch0:		sntop-ncurses.patch
 URL:		http://sntop.sourceforge.net/
-BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	fping
+BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 sntop is an ncurses-based top-esque console utility for monitoring the
@@ -42,7 +42,6 @@ u¿ytkownika.
 
 %prep
 %setup -q
-
 %patch0 -p1
 
 %build
@@ -54,16 +53,18 @@ u¿ytkownika.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_sysconfdir},%{_mandir}/man1}
-%{__make} install INSTDIR=$RPM_BUILD_ROOT%{_bindir} ETCDIR=$RPM_BUILD_ROOT%{_sysconfdir} MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
-
+%{__make} install \
+	INSTDIR=$RPM_BUILD_ROOT%{_bindir} \
+	ETCDIR=$RPM_BUILD_ROOT%{_sysconfdir} \
+	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog CREDITS  TODO
+%doc ChangeLog CREDITS TODO
 %{_sysconfdir}/sntoprc
 %attr(755,root,root) %{_bindir}/sntop
-%{_mandir}/man1/sntop.1.gz
+%{_mandir}/man1/sntop.1*
