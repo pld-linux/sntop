@@ -2,12 +2,13 @@ Summary:	A curses-based top-esque monitor of network host status
 Summary(pl):	Bazowany na ncurses monitor stanu hostów w sieci (podobny do topa)
 Name:		sntop
 Version:	1.4.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications
-# Source0:	http://sntop.sourceforge.net/files/%{name}-%{version}.tar.gz
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Patch0:		sntop-ncurses.patch
 URL:		http://sntop.sourceforge.net/
+BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	fping
 
 %description
@@ -42,22 +43,28 @@ u¿ytkownika.
 %prep
 %setup -q
 
+%patch0 -p1
+
 %build
-./configure --prefix=%{_prefix} --mandir=%{_mandir} --bindir=%{_bindir}
-%{__make}
+%configure2_13 
+
+
+%{__make}   
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_sysconfdir},%{_mandir}/man1}
+%{__make} install INSTDIR=$RPM_BUILD_ROOT%{_bindir} ETCDIR=$RPM_BUILD_ROOT%{_sysconfdir} MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf ChangeLog CREDITS README TODO
+
+gzip -9nf ChangeLog CREDITS  TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog.gz CREDITS.gz README.gz TODO.gz
+%doc *.gz
 %{_sysconfdir}/sntoprc
 %attr(755,root,root) %{_bindir}/sntop
 %{_mandir}/man1/sntop.1.gz
