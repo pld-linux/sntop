@@ -5,7 +5,7 @@ Version:	1.4.2
 Release:	2
 License:	GPL
 Group:		Applications
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		sntop-ncurses.patch
 URL:		http://sntop.sourceforge.net/
 Requires:	fping
@@ -46,7 +46,6 @@ u¿ytkownika.
 
 %build
 %configure2_13 
-
 
 %{__make}   
 
