@@ -39,7 +39,7 @@ czas. Rezultaty s± wy¶wietlane w postaci podobnej do topa.
 Rozszerzone mo¿liwo¶ci to generowanie HTML z rezultatami na
 automatyczn± stronê WWW, tryb bezpiecznego terminala, wykonywanie
 zewnêtrznego programu podczas alarmu (host nie dzia³aj±cy lub zmiana
-stanu hosta), obs³uga koloru, pliki konfigurcyjne dla systemu i
+stanu hosta), obs³uga koloru, pliki konfiguracyjne dla systemu i
 u¿ytkownika.
 
 %prep
