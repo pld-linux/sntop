@@ -5,10 +5,10 @@ Version:	1.4.3
 Release:	2
 License:	GPL
 Group:		Applications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/sntop/%{name}-%{version}.tar.gz
 # Source0-md5:	0e99c64ea5a1bad6c1a32ac0dc2e9dd9
-Patch0:		sntop-ncurses.patch
-Patch1:		sntop-alarm_exec.patch
+Patch0:		%{name}-ncurses.patch
+Patch1:		%{name}-alarm_exec.patch
 URL:		http://sntop.sourceforge.net/
 Requires:	fping
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -67,6 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog CREDITS TODO
-%{_sysconfdir}/sntoprc
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/sntoprc
 %attr(755,root,root) %{_bindir}/sntop
 %{_mandir}/man1/sntop.1*
