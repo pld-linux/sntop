@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/sntop/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ncurses.patch
 Patch1:		%{name}-alarm_exec.patch
 URL:		http://sntop.sourceforge.net/
+BuildRequires:	ncurses-devel
 Requires:	fping
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
