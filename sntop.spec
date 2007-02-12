@@ -1,5 +1,5 @@
 Summary:	A curses-based top-esque monitor of network host status
-Summary(pl.UTF-8):   Bazowany na ncurses monitor stanu hostów w sieci (podobny do topa)
+Summary(pl.UTF-8):	Bazowany na ncurses monitor stanu hostów w sieci (podobny do topa)
 Name:		sntop
 Version:	1.4.3
 Release:	2
