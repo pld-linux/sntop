@@ -1,5 +1,5 @@
 Summary:	A curses-based top-esque monitor of network host status
-Summary(pl):	Bazowany na ncurses monitor stanu hostów w sieci (podobny do topa)
+Summary(pl.UTF-8):   Bazowany na ncurses monitor stanu hostÃ³w w sieci (podobny do topa)
 Name:		sntop
 Version:	1.4.3
 Release:	2
@@ -28,20 +28,20 @@ page, secure terminal mode, execution of external file on alarm
 (configurable for either host DOWN or any change in host status),
 color support, and both user and system-wide config files.
 
-%description -l pl
+%description -l pl.UTF-8
 sntop jest bazowanym na ncurses podobnym do topa terminalowym
-narzêdziem do monitorowania ³±czno¶ci hostów w sieci, wspieraj±cy
-ró¿ne dodatki.
+narzÄ™dziem do monitorowania Å‚Ä…cznoÅ›ci hostÃ³w w sieci, wspierajÄ…cy
+rÃ³Å¼ne dodatki.
 
-sntop u¿ywa fpinga (ping te¿ jest obs³ugiwany) do ustalenia ³±czno¶ci
-miêdzy hostami wyszczególnionymi w pliku konfiguracyjnym co ustalony
-czas. Rezultaty s± wy¶wietlane w postaci podobnej do topa.
+sntop uÅ¼ywa fpinga (ping teÅ¼ jest obsÅ‚ugiwany) do ustalenia Å‚Ä…cznoÅ›ci
+miÄ™dzy hostami wyszczegÃ³lnionymi w pliku konfiguracyjnym co ustalony
+czas. Rezultaty sÄ… wyÅ›wietlane w postaci podobnej do topa.
 
-Rozszerzone mo¿liwo¶ci to generowanie HTML z rezultatami na
-automatyczn± stronê WWW, tryb bezpiecznego terminala, wykonywanie
-zewnêtrznego programu podczas alarmu (host nie dzia³aj±cy lub zmiana
-stanu hosta), obs³uga koloru, pliki konfiguracyjne dla systemu i
-u¿ytkownika.
+Rozszerzone moÅ¼liwoÅ›ci to generowanie HTML z rezultatami na
+automatycznÄ… stronÄ™ WWW, tryb bezpiecznego terminala, wykonywanie
+zewnÄ™trznego programu podczas alarmu (host nie dziaÅ‚ajÄ…cy lub zmiana
+stanu hosta), obsÅ‚uga koloru, pliki konfiguracyjne dla systemu i
+uÅ¼ytkownika.
 
 %prep
 %setup -q
