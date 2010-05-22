@@ -4,7 +4,7 @@ Name:		sntop
 Version:	1.4.3
 Release:	2
 License:	GPL
-Group:		Applications
+Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/sntop/%{name}-%{version}.tar.gz
 # Source0-md5:	0e99c64ea5a1bad6c1a32ac0dc2e9dd9
 Patch0:		%{name}-ncurses.patch
